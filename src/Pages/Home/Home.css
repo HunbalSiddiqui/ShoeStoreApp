@@ -1,0 +1,12 @@
+.home_container{
+    display: grid;
+    grid-template-columns: minmax(5vw,1fr) 90vw minmax(5vw,1fr);
+    grid-template-rows: minmax(100vh,min-content);
+    grid-template-areas: '. home_wrapper .';
+}
+.home_wrapper{
+    grid-area: home_wrapper;
+    border: 1px solid black;
+    background-image: url(./imgs/homeback.jpg);
+    background-size: 100% 100%,cover;
+}
