@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react'
 import './Home.css'
 import ShoeSlider from '../../Components/ShoeSlider/ShoeSlider'
+import ListGrid from '../../Components/ListGrid'
 export default function Home() {
     return (
     <Fragment>    
@@ -11,6 +12,7 @@ export default function Home() {
                 <ShoeSlider/>
             </div>
         </div>
+        <ListGrid/>
     </Fragment>
     )
 }
