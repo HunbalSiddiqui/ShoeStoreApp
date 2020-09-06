@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import {Style} from '@material-ui/icons'
+import {MergeType} from '@material-ui/icons'
 const useStyles = makeStyles({
   root: {
     width: 500,
@@ -41,7 +41,7 @@ export default function SubCategoryNav(props) {
    {
      subCategories.map((category,index)=>{
        return (
-      <BottomNavigationAction key={index} label={category} icon={<Style/>} />
+      <BottomNavigationAction key={index} label={category} icon={<MergeType/>} />
        )
      })
    }
