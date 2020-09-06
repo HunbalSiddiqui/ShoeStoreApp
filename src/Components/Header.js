@@ -45,7 +45,7 @@ export default function Header() {
         Help
       </Typography>
       <Typography variant="overline" display="block" gutterBottom className={classes.field}>
-        JoinUs
+        Join Us
       </Typography>
       <Typography variant="overline" display="block" gutterBottom className={classes.field}>
         Signin

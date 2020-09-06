@@ -41,7 +41,7 @@ function CenteredTabs(props) {
       >
         
         <Tab label="Home" onClick={()=>{navigate('/')}}/>
-        <Tab label="Men" onClick={()=>{navigate('/Men')}}/>
+        <Tab label="Men" onClick={()=>{navigate('/Men')}} selected/>
         <Tab label="Kids" onClick={()=>{navigate('/Kids')}}/>
         <Tab label="Women" onClick={()=>{navigate('/Women')}}/>
       </Tabs>

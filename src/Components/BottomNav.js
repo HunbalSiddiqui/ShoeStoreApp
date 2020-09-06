@@ -10,7 +10,11 @@ import {Facebook,Twitter} from '@material-ui/icons'
 const useStyles = makeStyles({
   root: {
     width: 500,
+    backgroundColor : '#333945'
   },
+  tabcolor : {
+    color : 'white'
+  }
 });
 
 export default function BottomNav() {
@@ -26,11 +30,11 @@ export default function BottomNav() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-      <BottomNavigationAction label="Nearby" icon={<Facebook />} />
-      <BottomNavigationAction label="Nearby" icon={<Twitter />} />
+      <BottomNavigationAction className={classes.tabcolor} label="Recent" icon={<RestoreIcon />} />
+      <BottomNavigationAction className={classes.tabcolor} label="Favorites" icon={<FavoriteIcon />} />
+      <BottomNavigationAction className={classes.tabcolor} label="Nearby" icon={<LocationOnIcon />} />
+      <BottomNavigationAction className={classes.tabcolor} label="Nearby" icon={<Facebook />} />
+      <BottomNavigationAction className={classes.tabcolor} label="Nearby" icon={<Twitter />} />
     </BottomNavigation>
   );
 }
