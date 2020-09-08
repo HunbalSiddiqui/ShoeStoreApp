@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route path='/' component={Home} exact/>
         <Route path='/Men' component={Men}/>
-        <Route path="/Men/Basketball" component={Baksetball} />
+        <Route path="/Men/:uid" component={Baksetball} />
         <Route path='/Kids' component={Kids}/>
         <Route path='/Women' component={Women}/>
         {/* <Route path="/test">

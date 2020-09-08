@@ -21,7 +21,18 @@ function SubCategoryNav(props) {
   const classes = useStyles();
 
   const navigate = (subRoute) =>{
-    
+    if(props.sourceRoute.toLowerCase()==='men')
+    {
+      props.history.push(`/Men/${subRoute}`)
+    }
+    else if(props.sourceRoute.toLowerCase()==='kids')
+    {
+      props.history.push(`/Men/${subRoute}`)
+    }
+    else if(props.sourceRoute.toLowerCase()==='women')
+    {
+      props.history.push(`/Men/${subRoute}`)
+    }
   }
   
   return (
@@ -31,7 +42,8 @@ function SubCategoryNav(props) {
             {
               props.subCategories.map((category,index)=>{
                 return(
-                  <Button variant="outlined"  className={classes.menuButton}>{category}</Button>
+                  <Button variant="outlined" key={index} className={classes.menuButton}
+                  onClick={(e)=>{navigate(category)}}>{category}</Button>
                 )
               })
             }
