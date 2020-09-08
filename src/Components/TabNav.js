@@ -16,14 +16,6 @@ function CenteredTabs(props) {
 
   const navigate = (route) => {
       props.history.push(route)
-    // if(route==='HOME')
-    // {
-    //     props.history.push('/')
-    // }
-    // else if (route==='MEN')
-    // {
-    //     props.history.push('/Men')
-    // }
 }
 
   const handleChange = (event, newValue) => {

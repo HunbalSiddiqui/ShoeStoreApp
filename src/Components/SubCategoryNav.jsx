@@ -1,52 +1,45 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import {MergeType} from '@material-ui/icons'
-const useStyles = makeStyles({
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import {withRouter} from 'react-router-dom'
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: 500,
+    flexGrow: 1,
   },
-});
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
-export default function SubCategoryNav(props) {
-  var [subCategories,setSubCategories] = useState([])
-  const fetchSubCategories = () =>{
-      props.subCategories.forEach(category => {
-          setSubCategories((prevState)=>[...prevState,category])
-      });
-  }
+
+function SubCategoryNav(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-  useEffect(()=>{
-      fetchSubCategories()
-  },[])
-  var test = () => {
-    return (
-      <h1>Test test</h1>
-    )
+
+  const navigate = (subRoute) =>{
+    
   }
+  
   return (
-   !subCategories ? 
-    null
-    :
-    <BottomNavigation
-    value={value}
-    onChange={(event, newValue) => {
-      setValue(newValue);
-    }}
-    showLabels
-    className={classes.root}
-  >
-   {
-     subCategories.map((category,index)=>{
-       return (
-      <BottomNavigationAction key={index} label={category} icon={<MergeType/>} />
-       )
-     })
-   }
-
-  </BottomNavigation>
-
+    <div className={classes.root}>
+      <AppBar position="static" color="transparent" className="flex">
+        <Toolbar>
+            {
+              props.subCategories.map((category,index)=>{
+                return(
+                  <Button variant="outlined"  className={classes.menuButton}>{category}</Button>
+                )
+              })
+            }
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 }
+
+
+export default withRouter(SubCategoryNav)

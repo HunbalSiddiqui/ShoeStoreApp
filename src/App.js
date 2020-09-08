@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import Men from './Pages/Men/Men';
 import Kids from './Pages/Kids/Kids';
 import Women from './Pages/Women/Women';
+import Baksetball from './Pages/Men/Baksetball';
 function App() {
   return (
     <div>
@@ -16,11 +17,13 @@ function App() {
       
       <Switch>
         <Route path='/' component={Home} exact/>
-        <Route path='/Men' component={Men}>
-          
-        </Route>
+        <Route path='/Men' component={Men}/>
+        <Route path="/Men/Basketball" component={Baksetball} />
         <Route path='/Kids' component={Kids}/>
         <Route path='/Women' component={Women}/>
+        {/* <Route path="/test">
+          <Route path="123" component={Home} />
+        </Route> */}
       </Switch>
       <div className="flex bottomNav" style={{width:'100%'}}>
         <BottomNav/>

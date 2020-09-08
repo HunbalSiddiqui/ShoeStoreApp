@@ -50,6 +50,9 @@ export default function Header() {
       <Typography variant="overline" display="block" gutterBottom className={classes.field}>
         Signin
       </Typography>
+      <Typography variant="overline" display="block" gutterBottom className={classes.field}>
+        Checkout
+      </Typography>
         </Toolbar>
       </AppBar>
     </div>
