@@ -1,7 +1,7 @@
 .men_container{
     display: grid;
     grid-template-columns: minmax(5vw,1fr) 90vw minmax(5vw,1fr);
-    grid-template-rows: minmax(100vh,min-content);
+    grid-template-rows: minmax(10vh,min-content);
     grid-template-areas: '. men_wrapper .';
     background-color: whitesmoke;
 }
@@ -9,7 +9,7 @@
     grid-area: men_wrapper;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh minmax(90vh,min-content);
+    grid-template-rows: 15vh ;
     background-color: white;
 }
 .men_subcategory{

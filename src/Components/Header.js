@@ -41,9 +41,9 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             <SportsBasketballTwoTone></SportsBasketballTwoTone>
           </Typography>
-          <Typography variant="overline" display="block" gutterBottom className={classes.field}>
+          {/* <Typography variant="overline" display="block" gutterBottom className={classes.field}>
         Help
-      </Typography>
+      </Typography> */}
       <Typography variant="overline" display="block" gutterBottom className={classes.field}>
         Join Us
       </Typography>

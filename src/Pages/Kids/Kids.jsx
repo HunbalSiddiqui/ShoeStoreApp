@@ -8,7 +8,7 @@ function Kids() {
         <div className="men_container">
             <div className="men_wrapper">
                 <div className="men_subcategory flex">
-                    <SubCategoryNav  subCategories={subCategories} sourceRoute={"Men"}/>
+                    <SubCategoryNav  subCategories={subCategories} sourceRoute={"Kids"}/>
                 </div>
             </div>
         </div>

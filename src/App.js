@@ -8,7 +8,7 @@ import Home from './Pages/Home/Home';
 import Men from './Pages/Men/Men';
 import Kids from './Pages/Kids/Kids';
 import Women from './Pages/Women/Women';
-import Baksetball from './Pages/Men/Baksetball';
+import ProductsDisplay from './Components/ProductsDisplay/ProductsDisplay';
 function App() {
   return (
     <div>
@@ -17,13 +17,18 @@ function App() {
       
       <Switch>
         <Route path='/' component={Home} exact/>
-        <Route path='/Men' component={Men}/>
-        <Route path="/Men/:uid" component={Baksetball} />
-        <Route path='/Kids' component={Kids}/>
-        <Route path='/Women' component={Women}/>
-        {/* <Route path="/test">
-          <Route path="123" component={Home} />
-        </Route> */}
+        <Route path='/Men'>
+          <Route path="/" component={Men}></Route>
+          <Route path="/Men/:uid" render={(props)=><ProductsDisplay {...props} sourceRoute={"Men"}/>}></Route>
+        </Route>
+        <Route path='/Kids' >
+        <Route path="/" component={Kids}></Route>
+          <Route path="/kids/:uid" render={(props)=><ProductsDisplay {...props} sourceRoute={"kids"}/>}></Route>
+        </Route>
+        <Route path='/Women' component={Women}>
+          <Route path="/" component={Women}></Route>
+          <Route path="/Women/:uid" render={(props)=><ProductsDisplay {...props} sourceRoute={"women"}/>}></Route>
+        </Route>
       </Switch>
       <div className="flex bottomNav" style={{width:'100%'}}>
         <BottomNav/>

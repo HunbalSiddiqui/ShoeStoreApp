@@ -1,0 +1,15 @@
+.producstdisplay_container{
+    display: grid;
+    grid-template-columns: minmax(5vw,1fr) 90vw minmax(5vw,1fr);
+    grid-template-rows: minmax(10vh,min-content);
+    grid-template-areas: '. products_display_wrapper .';
+    background-color: whitesmoke;
+}
+.products_display_wrapper{
+    grid-area: products_display_wrapper;
+    display : grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,min-content));
+    box-sizing: border-box;
+    padding : 1rem 1rem;
+    grid-gap: 1rem;
+}

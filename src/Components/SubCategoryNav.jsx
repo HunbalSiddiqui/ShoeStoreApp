@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import {withRouter} from 'react-router-dom'
+import {withRouter,Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -20,20 +20,6 @@ const useStyles = makeStyles((theme) => ({
 function SubCategoryNav(props) {
   const classes = useStyles();
 
-  const navigate = (subRoute) =>{
-    if(props.sourceRoute.toLowerCase()==='men')
-    {
-      props.history.push(`/Men/${subRoute}`)
-    }
-    else if(props.sourceRoute.toLowerCase()==='kids')
-    {
-      props.history.push(`/Men/${subRoute}`)
-    }
-    else if(props.sourceRoute.toLowerCase()==='women')
-    {
-      props.history.push(`/Men/${subRoute}`)
-    }
-  }
   
   return (
     <div className={classes.root}>
@@ -42,8 +28,10 @@ function SubCategoryNav(props) {
             {
               props.subCategories.map((category,index)=>{
                 return(
-                  <Button variant="outlined" key={index} className={classes.menuButton}
-                  onClick={(e)=>{navigate(category)}}>{category}</Button>
+                  <Link to={{pathname:`/${props.sourceRoute}/${category}`,
+                  aboutProps:{name : 'testName'}}} key={index}>
+                  <Button variant="outlined" key={index} className={classes.menuButton}>{category}</Button>
+                  </Link>
                 )
               })
             }
